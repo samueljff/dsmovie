@@ -15,7 +15,7 @@ public class User {
 	private Long id;
 	private String email;
 	
-	public User(Long id, String email) {
+	public User() {
 		super();
 		this.id = id;
 		this.email = email;
