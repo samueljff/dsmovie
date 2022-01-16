@@ -5,8 +5,7 @@ import { BASE_URL } from "utis/requests";
 
 function Listing() {
     
-    //Forma errada
-    
+    //Forma errada 
     axios.get(`${BASE_URL}/Movie?size=12&page=2`)
         .then(Response =>{
             console.log(Response.data)
