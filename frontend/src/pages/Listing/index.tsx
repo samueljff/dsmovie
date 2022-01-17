@@ -21,20 +21,24 @@ function Listing() {
     });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/Movie?size=12&page=${pageNumber}$sort=title`)
+        axios.get(`${BASE_URL}/Movie?size=12&page=${pageNumber}`)
             .then(Response => {
                 const data = Response.data as MoviePage;
                 setPage(data);
             });
     }, [pageNumber]);
 
+    const handlePageChange = (newPageNumber: number) => {
+        setPageNumber(newPageNumber);
+    }
+
     return (
         <>
+            <Pagination page={page} onchange={handlePageChange} />
             <div className="container">
-                <Pagination />
                 <div className="row">
                     {page.content.map(movie => (
-                        <div key={movie.id}className="col-sm-6 col-lg-4 col-xl-3 mb-3" >
+                        <div key={movie.id} className="col-sm-6 col-lg-4 col-xl-3 mb-3" >
                             <MovieCard movie={movie} />
                         </div>
                     )
