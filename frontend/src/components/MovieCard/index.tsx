@@ -1,5 +1,5 @@
 import MovieScore from "components/MovieScore";
-import { type } from "os";
+import {type} from "os";
 import { Link } from "react-router-dom";
 import { Movie } from "types/movie";
 
