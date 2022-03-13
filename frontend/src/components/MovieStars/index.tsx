@@ -34,8 +34,10 @@ function getFills(score: number) {
   }
 
   function Star({fill}: StarProps){
+    // eslint-disable-next-line eqeqeq
     if(fill==0){
       return <StarEmpty/>
+    // eslint-disable-next-line eqeqeq
     }else if(fill==1){
       return <StarFull/>
     }else{
