@@ -41,7 +41,7 @@ function FormCard( {movieId} : props) {
             }
         }
         axios(config).then(response => {
-            console.log(response.data);
+
             navigate(`/`);
         });
 
